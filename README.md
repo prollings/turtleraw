@@ -1,7 +1,7 @@
 ![repostat](https://img.shields.io/badge/repo%20status-Active-brightgreen) ![qtver](https://img.shields.io/badge/qt5-5.12%2B-orange) ![qt6support](https://img.shields.io/badge/qt6-unsupported-red)
 
 <p align="center">
-  <a href="https://gulpjs.com">
+  <a href="https://github.com/yeahitsjan/turtleraw">
     <img height="250" width="300" src="https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/resources/icons/logo_with_text.svg">
   </a>
   <p align="center">A dead-simple image viewer with a main focus on raw images and extensibility.</p>
