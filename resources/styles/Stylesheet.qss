@@ -77,12 +77,18 @@ QScrollBar::sub-line:vertical {
 #ShowFolderBrowserButton {
     border: none;
     padding: 0px;
+    background-color: black;
 }
 
 #ShowFolderBrowserButton:hover {
     color: rgb(104, 206, 196);
+    background-color: rgb(154, 154, 154);
 }
 
 #ShowFolderBrowserButton:pressed {
     color: black;
+}
+
+#WindowToolBar {
+    background-color: black;
 }

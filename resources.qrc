@@ -11,5 +11,6 @@
         <file>resources/default_shortcuts.ini</file>
         <file>resources/icons/logo.svg</file>
         <file>resources/icons/logo_with_text.svg</file>
+        <file>resources/icons/window_icon.svg</file>
     </qresource>
 </RCC>

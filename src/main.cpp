@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
     turtlerawApp.setApplicationName(QLatin1String("TurtleRaw"));
     turtlerawApp.setApplicationDisplayName(QLatin1String("TurtleRaw"));
     turtlerawApp.setApplicationVersion(QString("0.0.0"));
-    turtlerawApp.setWindowIcon(QIcon(":/resources/icons/logo.svg"));
+    turtlerawApp.setWindowIcon(QIcon(":/resources/icons/window_icon.svg"));
     turtlerawApp.setStyle(new PhantomStyle);
     installFonts();
     LOG(INFO) << "loaded fonts and initialized QApp object";
@@ -73,9 +73,9 @@ int main(int argc, char *argv[]) {
 
     // Set the palette before we show the first window / dialog so we have a consistent style.
     QPalette appPalette;
-    appPalette.setColor(QPalette::Base, QColor(80, 80, 80));
-    appPalette.setColor(QPalette::Window, QColor(80, 80, 80));
-    appPalette.setColor(QPalette::Button, QColor(80, 80, 80));
+    appPalette.setColor(QPalette::Base, QColor(23, 23, 23));
+    appPalette.setColor(QPalette::Window, QColor(23, 23, 23));
+    appPalette.setColor(QPalette::Button, QColor(23, 23, 23));
     appPalette.setColor(QPalette::Text, QColor(230, 230, 230));
     appPalette.setColor(QPalette::WindowText, QColor(230, 230, 230));
     appPalette.setColor(QPalette::ButtonText, QColor(230, 230, 230));

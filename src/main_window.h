@@ -11,6 +11,7 @@
 #include <QToolBar>
 #include <QMenu>
 #include <QAction>
+#include <QLabel>
 
 #include <QVBoxLayout>
 
@@ -48,6 +49,9 @@ public:
 
     // No inline function because we need to check if we got a valid path.
     void checkArguments(const QStringList &l);
+
+    void enableInformativeLabels(bool yn);
+    void fillInformativeLabels(TRImage img);
     
 protected:
     TRImage m_currentImage;
@@ -59,6 +63,12 @@ protected:
     QPushButton *m_nextBtn;
     QPushButton *m_metaDataBtn;
     QPushButton *m_deleteBtn;
+
+    QLabel *m_pathLbl;
+    QLabel *m_mimeTypeLbl;
+    QLabel *m_lastModifiedLbl;
+    QList<QLabel*> m_informativeLabels;
+
     QPushButton *m_menuBtn;
     QMenu *m_menu;
     
