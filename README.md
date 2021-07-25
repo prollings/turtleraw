@@ -1,9 +1,14 @@
 ![repostat](https://img.shields.io/badge/repo%20status-Active-brightgreen) ![qtver](https://img.shields.io/badge/qt5-5.12%2B-orange) ![qt6support](https://img.shields.io/badge/qt6-unsupported-red)
 
-![screenshot](https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/.github/images/screenshot-1.png)
+<p align="center">
+  <a href="https://gulpjs.com">
+    <img height="250" width="300" src="https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/resources/icons/logo_with_text.svg">
+  </a>
+  <p align="center">A dead-simple image viewer with a main focus on raw images and extensibility.</p>
+</p>
 
-<img style="float: left;" width=150 src="https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/resources/icons/logo_with_text.svg">
-A dead-simple image viewer with a main focus on raw images and extensibility.
+
+![screenshot](https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/.github/images/screenshot-1.png)
 
 **NOTE**: TurtleRaw is currently pre-alpha software, which means that it can be normal that the program crashes or is missing functions. This ``README`` will also grow and shrink from time to time...
 
