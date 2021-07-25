@@ -41,7 +41,6 @@ void MainWindow::create() {
         if (m_imageViewerWidget->loadImage(m_currentImage.read(), m_settings->useThumbnails())) {
             // Feed informative lables with data.
             fillInformativeLabels(m_currentImage);
-            enableInformativeLabels(true);
             // Set the window title to the current file name.
             setWindowTitle(m_currentImage.fileName());
             m_closeAction->setEnabled(true);
@@ -75,20 +74,6 @@ void MainWindow::checkArguments(const QStringList &l) {
         }
     } else {
         LOG(ERROR) << "Invalid startup argument. Expected file, not given.";
-    }
-}
-
-void MainWindow::enableInformativeLabels(bool yn) {
-    if (m_informativeLabels.isEmpty()) {
-        LOG(FATAL) << "Function called before layout was created. Not possible.";
-        return;
-    }
-
-    foreach(QLabel *lbl, m_informativeLabels) {
-        if (yn)
-            lbl->show();
-        else
-            lbl->hide();
     }
 }
 
@@ -134,34 +119,26 @@ void MainWindow::fillToolBar() {
     createToolBarButton(m_deleteBtn, m_toolBar, Hella::shFromIni("delete_img"), tr("Delete"), false);
     m_toolBarBtns.append(m_deleteBtn);
 
-    m_toolBar->addSeparator();
-
     QWidget *_leftToolBarSpacer = new QWidget(m_toolBar);
     _leftToolBarSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     m_toolBar->addWidget(_leftToolBarSpacer);
 
     QLabel *_pathLbl = new QLabel(tr("path: "), this);
-    m_pathLbl = new QLabel(this);
-    m_informativeLabels.append(_pathLbl);
-    m_informativeLabels.append(m_pathLbl);
+    m_pathLbl = new QLabel("/", this);
     m_toolBar->addWidget(_pathLbl);
     m_toolBar->addWidget(m_pathLbl);
 
     m_toolBar->addSeparator();
 
     QLabel *_mimeLbl = new QLabel(tr("type: "), this);
-    m_mimeTypeLbl = new QLabel(this);
-    m_informativeLabels.append(_mimeLbl);
-    m_informativeLabels.append(m_mimeTypeLbl);
+    m_mimeTypeLbl = new QLabel("/", this);
     m_toolBar->addWidget(_mimeLbl);
     m_toolBar->addWidget(m_mimeTypeLbl);
 
     m_toolBar->addSeparator();
     
     QLabel *_lastModifyLbl = new QLabel(tr("last modified: "), this);
-    m_lastModifiedLbl = new QLabel(this);
-    m_informativeLabels.append(_lastModifyLbl);
-    m_informativeLabels.append(m_lastModifiedLbl);
+    m_lastModifiedLbl = new QLabel("/", this);
     m_toolBar->addWidget(_lastModifyLbl);
     m_toolBar->addWidget(m_lastModifiedLbl);
 
@@ -169,7 +146,11 @@ void MainWindow::fillToolBar() {
     _righToolBarSpacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     m_toolBar->addWidget(_righToolBarSpacer);
 
-    enableInformativeLabels(false);
+    m_scriptsBtn = new QPushButton("\uEA0B", m_toolBar);
+    createToolBarButton(m_scriptsBtn, m_toolBar, Hella::shFromIni("scripts_tb"), tr("Scripts"), false);
+    m_toolBarBtns.append(m_scriptsBtn);
+
+    m_toolBar->addSeparator();
 
     m_menuBtn = new QPushButton("\uE5D2", m_toolBar);
     createToolBarButton(m_menuBtn, m_toolBar, Hella::shFromIni("menu"), tr("Menu"), false);

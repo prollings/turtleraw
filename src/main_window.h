@@ -50,7 +50,6 @@ public:
     // No inline function because we need to check if we got a valid path.
     void checkArguments(const QStringList &l);
 
-    void enableInformativeLabels(bool yn);
     void fillInformativeLabels(TRImage img);
     
 protected:
@@ -67,8 +66,8 @@ protected:
     QLabel *m_pathLbl;
     QLabel *m_mimeTypeLbl;
     QLabel *m_lastModifiedLbl;
-    QList<QLabel*> m_informativeLabels;
 
+    QPushButton *m_scriptsBtn;
     QPushButton *m_menuBtn;
     QMenu *m_menu;
     
