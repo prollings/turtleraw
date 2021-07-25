@@ -9,5 +9,7 @@
         <file>resources/fonts/RobotoCondensed-Bold.ttf</file>
         <file>resources/fonts/MaterialIconsSharp-Regular.otf</file>
         <file>resources/default_shortcuts.ini</file>
+        <file>resources/icons/logo.svg</file>
+        <file>resources/icons/logo_with_text.svg</file>
     </qresource>
 </RCC>

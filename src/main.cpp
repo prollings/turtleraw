@@ -63,6 +63,7 @@ int main(int argc, char *argv[]) {
     turtlerawApp.setApplicationName(QLatin1String("TurtleRaw"));
     turtlerawApp.setApplicationDisplayName(QLatin1String("TurtleRaw"));
     turtlerawApp.setApplicationVersion(QString("0.0.0"));
+    turtlerawApp.setWindowIcon(QIcon(":/resources/icons/logo.svg"));
     turtlerawApp.setStyle(new PhantomStyle);
     installFonts();
     LOG(INFO) << "loaded fonts and initialized QApp object";
@@ -79,7 +80,7 @@ int main(int argc, char *argv[]) {
     appPalette.setColor(QPalette::WindowText, QColor(230, 230, 230));
     appPalette.setColor(QPalette::ButtonText, QColor(230, 230, 230));
     // Signature color
-    appPalette.setColor(QPalette::Highlight, QColor(2, 143, 30));
+    appPalette.setColor(QPalette::Highlight, QColor(104, 206, 196));
     turtlerawApp.setPalette(appPalette);
 
     Settings *settings = new Settings;

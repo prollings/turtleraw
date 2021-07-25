@@ -61,12 +61,12 @@ QScrollBar::sub-line:vertical {
 
 #ToolBarButton:pressed {
     background-color: rgb(60, 60, 60);
-    color: rgb(2, 143, 30);
+    color: rgb(104, 206, 196);
 }
 
 #ToolBarButton:checked {
     background-color: rgb(60, 60, 60);
-    color: rgb(2, 143, 30);
+    color: rgb(104, 206, 196);
 }
 
 #ToolBarButton:menu-indicator {
@@ -80,7 +80,7 @@ QScrollBar::sub-line:vertical {
 }
 
 #ShowFolderBrowserButton:hover {
-    color: rgb(2, 143, 30);
+    color: rgb(104, 206, 196);
 }
 
 #ShowFolderBrowserButton:pressed {

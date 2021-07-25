@@ -2,6 +2,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/.github/images/screenshot-1.png)
 
+<img style="float: left;" width=150 src="https://raw.githubusercontent.com/yeahitsjan/turtleraw/develop/resources/icons/logo_with_text.svg">
 A dead-simple image viewer with a main focus on raw images and extensibility.
 
 **NOTE**: TurtleRaw is currently pre-alpha software, which means that it can be normal that the program crashes or is missing functions. This ``README`` will also grow and shrink from time to time...
